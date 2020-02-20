@@ -3,7 +3,7 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-set :branch, ENV.fetch("CAPISTRANO_BRANCH", "development")
+set :branch, ENV.fetch("CAPISTRANO_BRANCH", "develop")
 
 server "ec2-3-1-213-248.ap-southeast-1.compute.amazonaws.com",
        user: "ubuntu",
