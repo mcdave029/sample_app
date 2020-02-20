@@ -1,6 +1,8 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.12.0"
 
+set :rbenv_ruby, "2.7.0"
+
 set :application, "sample_app"
 set :repo_url, "git@github.com:mcdave029/sample_app.git"
 
