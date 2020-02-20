@@ -4,6 +4,9 @@ lock "~> 3.12.0"
 set :application, "sample_app"
 set :repo_url, "git@github.com:mcdave029/sample_app.git"
 
+# deploy directory on the server. Will be ie: '/var/www/myapp_production'
+set :deploy_to, -> { "/var/www/#{fetch(:application)}_#{fetch(:stage)}" }
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
