@@ -45,7 +45,7 @@ set :deploy_to, -> { "/var/www/#{fetch(:application)}_#{fetch(:stage)}" }
 
 # https://github.com/capistrano/rails
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
-append :linked_files, 'config/database.yml', "config/master.key"
+append :linked_files, 'config/database.yml', "config/master.key", ".env.#{fetch(:stage)}"
 
 set :migration_role, :app
 
